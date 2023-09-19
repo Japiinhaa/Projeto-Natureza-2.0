@@ -21,7 +21,7 @@ function ativarcontent(indice) {
     textos[indice].classList.add('active')
 }
 
-imagens.forEach(() => {
+imagens.forEach((item, indice) => {
     item.addEventListener('click', () => {
         ativarcontent(indice)
     })
