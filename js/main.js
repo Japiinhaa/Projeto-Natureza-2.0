@@ -17,13 +17,15 @@ const textos = document.querySelectorAll('.js-content section')
 console.log(imagens)
 console.log(textos)
 
-function ativarcontent(indice) {
+function ativarConteudo (indice){
+    textos.forEach((item) => {
+        item.classList.remove('active')
+    })
     textos[indice].classList.add('active')
 }
 
-imagens.forEach((item, indice) => {
-    item.addEventListener('click', () => {
-        ativarcontent(indice)
+imagens.forEach((item, indice) =>{
+    item.addEventListener('click',() =>{
+        ativarConteudo(indice)
     })
 })
-
