@@ -41,3 +41,14 @@ nav{
 .js-content section.active{
     display: block;
 }
+
+.toggle {
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #494949;
+    padding: 0.625rem;
+    border-radius: 5px;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    display: none;
+}
