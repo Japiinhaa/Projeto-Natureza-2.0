@@ -1,4 +1,5 @@
 export default function menuMobileInit() {
+    
     const toggle = document.querySelector('.toggle');
     const menuList = document.querySelector('.js-list');
 

@@ -1,48 +1,36 @@
-
-nav{
-    background-color: var(--background-green) ;
-    margin-top: 40px;
-    padding: 20px;
+.menu {
+    max-width: var(--width);
+    margin: 2rem 0 2rem auto;
+    color: var(--color-white);
+    background-color: var(--background-green);
     display: flex;
-    align-items: center;
-    width: 1200px;
-    
-}
+  }
+  
+  .lista {
+    display: flex;
+  }
 
-.link-nav{   
-    margin-right: 20px;
-    margin-left: 5px;
-    color: #fff;
-    
-}
-
-.link-nav:hover{
-    background-color: #fff;
+  .links-list {
+    gap: 0.5rem;
+    display: flex;
+  }
+  
+  .links-list a {
+    padding: 0.5rem;
+    margin: 0.2rem;
+    display: flex;
+    color: var(--color-white);
+    font-weight: bold;
+  }
+  
+  .links-list a:hover {
     color: var(--color-brown);
-}
-
-.nav{
-    justify-content: right;
-    display: flex;
-}
-
-
-.nav-item{
-    padding: 10px;
-    display: flex;
-    border-radius: 15px;
-    cursor: pointer;
-}
-
-.js-content section{
-    display: none;
-}
-
-.js-content section.active{
-    display: block;
-}
-
-.toggle {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    transition: 0.7s ease-in-out;
+  }
+ 
+  .toggle {
     align-items: center;
     gap: 0.5rem;
     background-color: #494949;
@@ -52,44 +40,51 @@ nav{
     font-weight: bold;
     display: none;
 }
-
-@media screen and (max-width: 768px) {
-
-    .js-list{
-        display: none;
-        animation: fadeOut .3s forwards;
+  
+  @media screen and (max-width: 768px) {
+    .toggle {
+      display: flex;
     }
-
-    .toggle{
-        display: flex;
+  
+    .lista {
+      display: none;
     }
-
-
-    .js-list.active{
-        display: block;
-        position: absolute;
-        top: 69px;
-        left: 0;
-        width: 100%;
-        background-color: var(--background-green);
-        z-index: 100;
-        animation: slideDownMenu .5s forwards;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .lista {
+      display: none;
+      animation: fadeOut 0.3s forwards;
     }
-
-    .toggle span.active{
-        animation: slideDownMenu .5s forwards;
+  
+    .toggle {
+      display: flex;
     }
-
-}
-
-@keyframes slideDownMenu {
+  
+    .lista.active {
+      display: block;
+      position: absolute;
+      top: 69px;
+      left: 0;
+      width: 100%;
+      background-color: var(--background-green);
+      z-index: 100;
+      animation: slideDownMenu 0.5s forwards;
+    }
+  
+    .toggle span.active {
+      animation: slideDownMenu 0.5s forwards;
+    }
+  }
+  
+  @keyframes slideDownMenu {
     from {
-        opacity: 0;
-        transform: translateX(-10px);
+      opacity: 0;
+      transform: translateX(-10px);
     }
-
+  
     to {
-        opacity: 1;
-        transform: translateX(0);
+      opacity: 1;
+      transform: translateX(0);
     }
-}
+  }
