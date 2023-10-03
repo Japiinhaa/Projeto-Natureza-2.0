@@ -1,12 +1,15 @@
-const faqs = document.querySelectorAll(".faq");
+export default function accordionInit() {
+    
+    const faqs = document.querySelectorAll('.faq');
 
-faqs.forEach(faq => {
-    faq.addEventListener("click", () => {
-        if (faq.classList.contains("active")) {
-            faq.classList.remove("active");
-        } else {
-            faqs.forEach(otherFaq => otherFaq.classList.remove("active"));
-            faq.classList.add("active");
-        }
+    faqs.forEach(faq => {
+        faq.addEventListener('click', () => {
+            if (faq.classList.contains('active')) {
+                faq.classList.remove('active');
+            } else {
+                faqs.forEach(otherFaq => otherFaq.classList.remove('active'));
+                faq.classList.add('active');
+            }
+        });
     });
-});
+}
